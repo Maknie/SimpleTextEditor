@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+      integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="toolbar">
+      <ul class="tool-list">
+        <li class="tool">
+          <button type="button" data-command="justifyLeft" class="tool--btn">
+            <i class="fas fa-align-left"></i>
+          </button>
+        </li>
+        <li class="tool">
+          <button type="button" data-command="justifyCenter" class="tool--btn">
+            <i class="fas fa-align-center"></i>
+          </button>
+        </li>
+        <li class="tool">
+          <button type="button" data-command="justifyRight" class="tool--btn">
+            <i class="fas fa-align-right"></i>
+          </button>
+        </li>
+        <li class="tool">
+          <button type="button" data-command="justifyFull" class="tool--btn">
+            <i class="fas fa-align-justify"></i>
+          </button>
+        </li>
+        <li class="tool">
+          <button type="button" data-command="undo" class="tool--btn">
+            <i class="fas fa-arrow-left"></i>
+          </button>
+        </li>
+        <li class="tool">
+          <button type="button" data-command="redo" class="tool--btn">
+            <i class="fas fa-arrow-right"></i>
+          </button>
+        </li>
+        <li class="tool">
+          <button type="button" data-command="bold" class="tool--btn">
+            <i class="fas fa-bold"></i>
+          </button>
+        </li>
+        <li class="tool">
+          <button type="button" data-command="italic" class="tool--btn">
+            <i class="fas fa-italic"></i>
+          </button>
+        </li>
+        <li class="tool">
+          <button type="button" data-command="underline" class="tool--btn">
+            <i class="fas fa-underline"></i>
+          </button>
+        </li>
+        <li class="tool">
+          <button
+            type="button"
+            data-command="insertOrderedList"
+            class="tool--btn"
+          >
+            <i class="fas fa-list-ol"></i>
+          </button>
+        </li>
+        <li class="tool">
+          <button
+            type="button"
+            data-command="insertUnorderedList"
+            class="tool--btn"
+          >
+            <i class="fas fa-list-ul"></i>
+          </button>
+        </li>
+        <li class="tool">
+          <button type="button" data-command="createlink" class="tool--btn">
+            <i class="fas fa-link"></i>
+          </button>
+        </li>
+        <li>
+          <label for="font"></label>
+          <select
+            id="font"
+            onchange="fontEditor(this[this.selectedIndex].value)"
+          >
+            <option value="Arial">Arial</option>
+            <option value="Calibri">Calibri</option>
+            <option value="Comic Sans MS">Comic Sans MS</option>
+          </select>
+        </li>
+      </ul>
+    </div>
+
+    <div id="output" contenteditable="true"></div>
+    <div class="editButtons">
+        <div>
+            <label for="openFile">Open File</label>
+            <input type="file" id="openFile" value="Open" />
+        </div>
+        <div>
+            <button onclick="save()">Save file</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
